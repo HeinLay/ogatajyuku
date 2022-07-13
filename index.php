@@ -233,7 +233,7 @@ get_header();
         <a href="/about/" class="cmn-btn01"><span>小縣塾実践会について詳しく知る</span></a>
         <a href="<?php bloginfo('url'); ?>/about/#instructor" class="cmn-btn01"><span>講師紹介</span></a>
       </div>
-      <a href="<?php bloginfo('url'); ?>/entry/" class="cmn-btn02"><span>説明会の日程・参加申込はこちらから</span></a>
+      <a href="<?php bloginfo('url'); ?>/entry/" class="cmn-btn02"><span>体験会の日程・参加申込はこちらから</span></a>
     </div>
   </div>
   <!-- ./message-coach -->

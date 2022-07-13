@@ -132,7 +132,7 @@
 						<a href="<?php bloginfo('url'); ?>/contact/">お問い合わせ</a>
 					</li>
 				</ul>
-				<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect"><span>説明会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
+				<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect"><span>体験会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
 			</div>
 			<!-- ./ h-right -->
 		</div>
@@ -143,7 +143,7 @@
 	<div class="gnav s-sp">
 		<div class="jsHeadNav">
 			<?php if (is_home()) { ?>
-				<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect apply-btn-top"><span>説明会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
+				<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect apply-btn-top"><span>体験会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
 				<div class="menu-trigger jsSlideMenu menu-trigger-top">
 					<span></span>
 					<span></span>
@@ -158,7 +158,7 @@
 								<img src="<?php print get_template_directory_uri(); ?>/assets/img/ft_logo.png" alt="小縣塾 SAMURAISM">
 							</a>
 						</h1>
-						<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect apply-btn-single"><span>説明会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
+						<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect apply-btn-single"><span>体験会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
 					</div>
 				</div>
 			<?php } ?>
@@ -183,7 +183,7 @@
 						<li><a href="<?php echo site_url(); ?>/news">お知らせ</a></li>
 						<li><a href="<?php bloginfo('url'); ?>/policy/">プライバシーポリシー</a></li>
 					</ul>
-					<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect"><span>説明会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
+					<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect"><span>体験会</span><span>の</span>お申し込み<span>は</span><br>こちらから</a>
 				</div>
 			</div>
 		</div>
