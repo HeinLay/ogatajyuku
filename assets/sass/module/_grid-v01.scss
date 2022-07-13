@@ -1,0 +1,202 @@
+/* ========================================================
+grid.css - 独自グリッドシステム
+======================================================== */
+
+/* grid-XX - グリッド基本構成
+-------------------------------------------------------- */
+
+.grid{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.grid-item{
+  box-sizing: border-box;
+  display: block;
+}
+
+/* grid-XX - 横幅比率の指定
+ * 合計を100すると横一列に配置、それ以上の場合は下段追加
+-------------------------------------------------------- */
+
+/* sp */
+@media screen and (max-width: 767px) {
+  .grid-sp > .grid-item{
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .grid-sp > .grid-05,
+  .grid-sp > .grid-05-sp{
+    width: 5%;
+  }
+  .grid-sp > .grid-10,
+  .grid-sp > .grid-10-sp{
+    width: 10%;
+  }
+  .grid-sp > .grid-15,
+  .grid-sp > .grid-15-sp{
+    width: 15%;
+  }
+  .grid-sp > .grid-20,
+  .grid-sp > .grid-20-sp{
+    width: 20%;
+  }
+  .grid-sp > .grid-25,
+  .grid-sp > .grid-25-sp{
+    width: 25%;
+  }
+  .grid-sp > .grid-30,
+  .grid-sp > .grid-30-sp{
+    width: 30%;
+  }
+  .grid-sp > .grid-35,
+  .grid-sp > .grid-35-sp{
+    width: 35%;
+  }
+  .grid-sp > .grid-40,
+  .grid-sp > .grid-40-sp{
+    width: 40%;
+  }
+  .grid-sp > .grid-45,
+  .grid-sp > .grid-45-sp{
+    width: 45%;
+  }
+  .grid-sp > .grid-50,
+  .grid-sp > .grid-50-sp{
+    width: 50%;
+  }
+  .grid-sp > .grid-55,
+  .grid-sp > .grid-55-sp{
+    width: 55%;
+  }
+  .grid-sp > .grid-60,
+  .grid-sp > .grid-60-sp{
+    width: 60%;
+  }
+  .grid-sp > .grid-65,
+  .grid-sp > .grid-65-sp{
+    width: 65%;
+  }
+  .grid-sp > .grid-70,
+  .grid-sp > .grid-70-sp{
+    width: 70%;
+  }
+  .grid-sp > .grid-75,
+  .grid-sp > .grid-75-sp{
+    width: 75%;
+  }
+  .grid-sp > .grid-80,
+  .grid-sp > .grid-80-sp{
+    width: 80%;
+  }
+  .grid-sp > .grid-85,
+  .grid-sp > .grid-85-sp{
+    width: 85%;
+  }
+  .grid-sp > .grid-90,
+  .grid-sp > .grid-90-sp{
+    width: 90%;
+  }
+  .grid-sp > .grid-95,
+  .grid-sp > .grid-95-sp{
+    width: 95%;
+  }
+  .grid-sp > .grid-100,
+  .grid-sp > .grid-100-sp{
+    width: 100%;
+  }
+}
+
+/* pc */
+@media screen and (min-width: 768px) {
+  .grid-pc > .grid-item{
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  .grid-pc > .grid-05,
+  .grid-pc > .grid-05-pc{
+    width: 5%;
+  }
+  .grid-pc > .grid-10,
+  .grid-pc > .grid-10-pc{
+    width: 10%;
+  }
+  .grid-pc > .grid-15,
+  .grid-pc > .grid-15-pc{
+    width: 15%;
+  }
+  .grid-pc > .grid-20,
+  .grid-pc > .grid-20-pc{
+    width: 20%;
+  }
+  .grid-pc > .grid-25,
+  .grid-pc > .grid-25-pc{
+    width: 25%;
+  }
+  .grid-pc > .grid-30,
+  .grid-pc > .grid-30-pc{
+    width: 30%;
+  }
+  .grid-pc > .grid-35,
+  .grid-pc > .grid-35-pc{
+    width: 35%;
+  }
+  .grid-pc > .grid-40,
+  .grid-pc > .grid-40-pc{
+    width: 40%;
+  }
+  .grid-pc > .grid-45,
+  .grid-pc > .grid-45-pc{
+    width: 45%;
+  }
+  .grid-pc > .grid-50,
+  .grid-pc > .grid-50-pc{
+    width: 50%;
+  }
+  .grid-pc > .grid-55,
+  .grid-pc > .grid-55-pc{
+    width: 55%;
+  }
+  .grid-pc > .grid-60,
+  .grid-pc > .grid-60-pc{
+    width: 60%;
+  }
+  .grid-pc > .grid-65,
+  .grid-pc > .grid-65-pc{
+    width: 65%;
+  }
+  .grid-pc > .grid-70,
+  .grid-pc > .grid-70-pc{
+    width: 70%;
+  }
+  .grid-pc > .grid-75,
+  .grid-pc > .grid-75-pc{
+    width: 75%;
+  }
+  .grid-pc > .grid-80,
+  .grid-pc > .grid-80-pc{
+    width: 80%;
+  }
+  .grid-pc > .grid-85,
+  .grid-pc > .grid-85-pc{
+    width: 85%;
+  }
+  .grid-pc > .grid-90,
+  .grid-pc > .grid-90-pc{
+    width: 90%;
+  }
+  .grid-pc > .grid-95,
+  .grid-pc > .grid-95-pc{
+    width: 95%;
+  }
+  .grid-pc > .grid-100,
+  .grid-pc > .grid-100-pc{
+    width: 100%;
+  }
+}

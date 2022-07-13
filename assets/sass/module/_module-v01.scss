@@ -1,0 +1,430 @@
+@charset "UTF-8";
+
+/* ========================================================
+module-v01.css - モジュール スタイルv1
+======================================================== */
+
+/* ttl-XX-XX - 見出し（H1〜H6他）の設定
+-------------------------------------------------------- */
+/* level - フォントサイズ等の設定 */
+.ttl{
+  line-height: 1.6;
+  font-weight: 800;
+  letter-spacing: 0.4rem;
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
+  .ttl-level-01{
+    font-size: 3.2rem;
+  }
+  .ttl-level-02{
+    font-size: 2.8rem;
+  }
+  .ttl-level-03{
+    font-size: 2.6rem;
+  }
+  .ttl-level-04{
+    font-size: 2.4rem;
+  }
+  .ttl-level-05{
+    font-size: 2rem;
+  }
+  .ttl-level-06{
+    font-size: 1.8rem;
+  }
+}
+/* pc */
+@media screen and (min-width: 768px) {
+  .ttl-level-01{
+    font-size: 4rem;
+  }
+  .ttl-level-02{
+    font-size: 3.6rem;
+  }
+  .ttl-level-03{
+    font-size: 3rem;
+  }
+  .ttl-level-04{
+    font-size: 2.4rem;
+  }
+  .ttl-level-05{
+    font-size: 2rem;
+  }
+  .ttl-level-06{
+    font-size: 1.8rem;
+  }
+}
+
+
+/* theme - デザイン設定 */
+.ttl-theme-01{
+  background: #192d72;
+  color: #fff;
+}
+.ttl-theme-02{
+  background: transparent;
+  color: #fff;
+}
+.ttl-theme-03{
+  background: transparent;
+  color: #192d72;
+}
+.ttl-theme-04{
+  background: transparent;
+  color: #222;
+}
+.ttl-theme-05{
+  background: transparent;
+  color: #d06c70;
+}
+.ttl-theme-06{
+  background: transparent;
+  color: #355ff2;
+}
+.ttl-after-01:after{
+  display: block;
+  width: 80px;
+  height: 6px;
+  margin: 4rem auto 0 auto;
+  background: #192d72;
+  content: "";
+  border-radius: 4px;
+}
+
+/* btn-XX-XX - リンクボタンの設定
+-------------------------------------------------------- */
+/* btn - ボタンデフォルト設定 */
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  position: relative;
+}
+
+.btn:hover, .btn:active, .btn:focus{
+  text-decoration: none;
+  cursor:pointer;
+  transition: 0.4s;
+}
+
+/* btn-level - ボタンの大きさ・フォントサイズ設定 */
+.btn-level-01{
+  height: 40px;
+  font-size: 1.4rem;
+}
+.btn-level-02{
+  height: 76px;
+  font-size: 1.6rem;
+}
+
+
+/* btn-XX - ボタンの横幅サイズ設定 */
+.btn-block{
+  display: block;
+}
+
+/* theme - ボタンデザイン設定 */
+.btn-theme-01{
+  width: 122px;
+  border: 1px solid $color01;
+  color: $color01;
+}
+.btn-theme-01:hover,
+.btn-theme-01:active,
+.btn-theme-01:focus{
+  background: $color01;
+  color: $white;
+  opacity: 1;
+}
+.btn-theme-02{
+  width: 300px;
+  background: $color01;
+  color: $white;
+}
+.btn-theme-02:hover,
+.btn-theme-02:active,
+.btn-theme-02:focus{
+  background: rgba(0,88,83,0.6);
+}
+.btn-theme-03{
+  width: 300px;
+  background: $white;
+  color: $black;
+}
+.btn-theme-03:hover,
+.btn-theme-03:active,
+.btn-theme-03:focus{
+  background: rgba(255,255,255,0.6);
+}
+
+/* txt-link-XX - テキストリンクの設定
+-------------------------------------------------------- */
+.txt-link {
+  padding: 0.4rem;
+  text-decoration: none;
+}
+.txt-link:hover, .txt-link:active, .txt-link:focus {
+  padding: 0.4rem;
+  text-decoration: underline;
+  transition: 0.4s;
+}
+
+.txt-link-01{
+  color: #133256;
+}
+.txt-link-01:hover,
+.txt-link-01:active,
+.txt-link-01:focus {
+  background: #f5f5f5;
+}
+
+/* box-XX-XX - ボックスの設定
+-------------------------------------------------------- */
+/* box - ボックスデフォルト設定 */
+.box{
+  padding: 2rem;
+}
+.box-dotted{
+  border: 0.1rem dotted #192d72;
+}
+.box-bordered{
+  border: 0.1rem solid #192d72;
+}
+.box-rounded{
+  border: 0.1rem solid #192d72;
+  border-radius: 0.4rem;
+}
+.box-circle{
+  border: 1px solid #192d72;
+  border-radius: 50%;
+}
+
+/* theme - ボックスデザイン設定 */
+.box-theme-01{
+  border: 1px solid #d06c70;
+  background: #faf0f0;
+  color: #222222;
+}
+
+/* breadcrumb-XX - パンくずの設定
+-------------------------------------------------------- */
+.breadcrumb {
+	color: $color04;
+  font-size: 1.4rem;
+  padding: 0.5rem 1.5rem;
+
+	@include mq(sp) {
+		position: relative;
+		z-index: 2;
+	}
+
+	@include mq() {
+		padding-left: 4.6rem;
+	}
+}
+
+@include mq(sp) {
+  .crumbs {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100%;
+  }
+}
+
+.breadcrumb-item{
+  display: inline-block;
+}
+
+.breadcrumb-item:after{
+  content: "　|　";
+}
+.breadcrumb-item:last-child:after{
+  content: "";
+}
+
+.breadcrumb-theme-01,
+.breadcrumb-theme-01 > li> a{
+  color: #999999;
+}
+
+/* hr-XX - 水平線・区切り線の設定
+-------------------------------------------------------- */
+.hr-theme-01{
+  border-top: 2px solid #192d72;
+}
+.hr-theme-02 {
+  border-top: 3px double #192d72;
+}
+.hr-theme-03 {
+  border-top: 1px dashed #192d72;
+}
+.hr-theme-04 {
+  border-top: 1px dotted #192d72;
+}
+.hr-theme-05 {
+  background-color: #fff;
+  border-top: 2px dashed #192d72;
+}
+.hr-theme-06 {
+	background-color: #fff;
+	border-top: 2px dotted #192d72;
+}
+.hr-theme-07 {
+  border-top: 10px solid #fef2ee;
+}
+
+
+/* bg-XX - 背景の設定
+-------------------------------------------------------- */
+.bg-stripe{
+  background-color: #e1e1e1;
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+}
+.bg-dot{
+  background-color: #e1e1e1;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff)),
+  -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, transparent), color-stop(.5, #ffffff), to(#ffffff));
+
+}
+.bg-color-01{
+  background: #fef9f6;
+}
+
+
+/* modal-XX-XX - モーダルウインドウの設定
+-------------------------------------------------------- */
+.modal-content {
+  display: none;
+  position: fixed;
+  z-index: 32;
+  overflow-y: scroll;
+}
+
+.modal-content-theme{
+  padding: 2rem;
+  background: #fff;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  width: 100%;
+  height: 120%;
+  background-color: rgba( 0,0,0, 0.75 );
+}
+
+/* list-XX-XX - リストの設定
+-------------------------------------------------------- */
+.list > li{
+  position: relative;
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+.list-02 > li{
+  position: relative;
+  padding-left: 1rem;
+}
+
+.list-theme-01 > li:before{
+  display: inline;
+  margin-right: 0.5em;
+  color: #f28357;
+  content: "●";
+}
+
+.list-theme-02 > li{
+  counter-increment: number;
+}
+.list-theme-02 > li:before{
+  display: inline-block;
+  margin-right: 0.5em;
+  color: #f28357;
+  font-weight: 800;
+  content: counter(number) ".";
+}
+.list-theme-03 > li{
+  counter-increment: number;
+}
+.list-theme-03 > li:before{
+  display: inline-block;
+  margin-right: 0.5em;
+  color: #222;
+  font-weight: 400;
+  content: counter(number) ".";
+}
+
+/* table-XX-XX - テーブルの設定
+-------------------------------------------------------- */
+.table{
+  width: 100%;
+}
+.table th{
+  font-weight: 800;
+}
+.table-theme-02{
+  border: 1px solid #ccc;
+}
+.table-theme-02 th,
+.table-theme-02 td{
+  border-top: 1px solid #ccc;
+}
+.table-theme-02 th{
+  background: #f5f5f5;
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
+  .table{
+    border-top: 0;
+  }
+  .table th,
+  .table td{
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .table-theme-01 th:nth-child(odd){
+    background: #f5f5f5;
+  }
+}
+
+/* pc */
+@media screen and (min-width: 768px) {
+  form .table th{
+    width: 250px;
+  }
+  .table th,
+  .table td{
+    padding: 1rem;
+  }
+  .table-theme-01 tr:nth-child(odd){
+    background: #f5f5f5;
+  }
+  .table-theme-02 th,
+  .table-theme-02 td{
+    border-right: 1px solid #ccc;
+  }
+}
+
+/* label-XX-XX - ラベルの設定
+-------------------------------------------------------- */
+.label{
+  margin-left: 0.4rem;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: normal;
+  border-radius: 0.3rem;
+}
+.label-theme-01{
+  background: #dc143c;
+  color: #fff;
+}

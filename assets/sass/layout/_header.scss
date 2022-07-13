@@ -1,0 +1,435 @@
+@charset "UTF-8";
+
+.header {
+	@include mq() {
+		width: 100%;
+		padding: 1rem 3rem 1.4rem 3rem;
+		box-sizing: border-box;
+		min-width: 980px;
+	}
+
+	&.page {
+		display: block !important;
+		position: relative;
+		background: $color04;
+		color: $white;
+		border-bottom: 1px solid $color14;
+
+		.h-right ul li a {
+			color: $white;
+		}
+	}
+
+	&.sticky {
+		position: fixed;
+		top: 0;
+		z-index: 999;
+		width: 100%;
+		background: rgba(255, 255, 255, 0.8);
+		color: $color04;
+		max-width: 1920px;
+
+		.logo-black {
+			display: block;
+		}
+
+		.logo-white {
+			display: none;
+		}
+
+		.h-right ul li a {
+			color: $color04;
+		}
+	}
+
+	.logo-black {
+		display: none;
+	}
+
+	.logo-white {
+		display: block;
+	}
+
+	.headerIn {
+		@include mq() {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	.h-logo {
+		@include mq() {
+			width: 13%;
+			max-width: 180px;
+		}
+
+		@include mq(md-ipad) {
+			max-width: 150px;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	.h-right {
+		@include mq() {
+			display: flex;
+			flex: 1 auto;
+			flex-wrap: nowrap;
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+		ul {
+			@include mq() {
+				display: flex;
+				justify-content: center;
+				margin-right: 0.6rem;
+			}
+
+			li {
+				@include mq() {
+					position: relative;
+					margin: 0 2rem 0 0;
+					padding: 0 2rem 0 0;
+					border-right: 1px solid;
+				}
+
+				@include mq(md-ipad) {
+					margin: 0 1.5rem 0 0;
+					padding: 0 1.5rem 0 0;
+				}
+
+				&:last-child {
+					@include mq() {
+						padding: 0;
+						border: none;
+					}
+				}
+
+				a {
+					color: $color04;
+
+					@include mq(md-ipad) {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.top-header {
+	position: absolute;
+	z-index: 5;
+	box-sizing: border-box;
+
+	@include mq(sp) {
+		left: 50%;
+		width: 95%;
+		padding: 1rem 0;
+		transform: translate(-50%, 0);
+	}
+
+	@include mq() {
+		width: 100%;
+		padding: 2.5rem;
+	}
+
+	.top-header-inner {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		.nav {
+			@include mq() {
+				display: flex;
+				justify-content: center;
+				margin-right: 0.6rem;
+			}
+			li {
+				@include mq() {
+					position: relative;
+					margin: 0 2rem 0 0;
+					padding: 0 2rem 0 0;
+					border-right: 1px solid $white;
+				}
+
+				@include mq(md-ipad) {
+					margin: 0 1.5rem 0 0;
+					padding: 0 1.5rem 0 0;
+				}
+
+				&:last-child {
+					@include mq() {
+						padding: 0;
+						border: none;
+					}
+				}
+
+				a {
+					color: $white;
+
+					@include mq(md-ipad) {
+						font-size: 1.4rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.apply-btn {
+	display: block;
+	padding: 1rem 2rem;
+	border: 2px solid $color02;
+	box-shadow: 0 5px 0 $color03;
+	box-sizing: border-box;
+	background: $color01;
+	color: $white;
+	font-size: 1.4rem;
+	font-weight: 800;
+	text-align: center;
+	border-radius: 10px;
+
+	@include mq(sp) {
+		width: 48%;
+		height: 70px;
+	}
+
+	@include mq() {
+		width: 30%;
+		height: 67px;
+		max-width: 195px;
+	}
+
+	@include mq(md-ipad) {
+		height: unset;
+		font-size: 1.2rem;
+		max-width: 175px;
+	}
+
+	span {
+		&:first-child {
+			font-size: 1.7rem;
+
+			@include mq(md-ipad) {
+				font-size: 1.5rem;
+			}
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			font-size: 1.1rem;
+
+			@include mq(md-ipad) {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	&.apply-btn-top,
+	&.apply-btn-single {
+    width: 55%;
+    height: 55px;
+		padding: 0.8rem 1.5rem;
+		font-size: 1.2rem !important;
+		max-width: 165px;
+
+		span {
+			font-size: 1.2rem !important;
+		}
+	}
+
+	&.apply-btn-top {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		content: '';
+
+		&.sticky {
+			display: none;
+		}
+	}
+
+}
+
+.gnav {
+	display: inline-block;
+	position: fixed;
+	z-index: 7;
+	width: 100%;
+	transition: 0.4s;
+
+	.menu-trigger {
+		position: absolute;
+		right: 2rem;
+		z-index: 5;
+		width: 44px;
+		height: 44px;
+		box-sizing: border-box;
+		background: transparent;
+		background-color: $black;
+		color: #fff;
+		opacity: 0.8;
+
+		span {
+			display: inline-block;
+			position: absolute;
+			left: 0.7rem;
+			width: 30px;
+			height: 3px;
+			background-color: $white;
+			transition: all 0.6s;
+
+			&:nth-child(1) {
+				top: 12px;
+			}
+
+			&:nth-child(2) {
+				top: 21px;
+			}
+
+			&:nth-child(3) {
+				bottom: 12px;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.menu-trigger-top {
+			display: none;
+			position: absolute;
+			top: 1.5rem;
+
+			&.sticky {
+				display: block;
+			}
+		}
+
+		&.menu-trigger-single {
+			display: none;
+			position: fixed;
+			top: 8.7rem;
+
+			&.sticky {
+				display: block;
+				top: 1.5rem;
+				&.active {
+					top: 3rem;
+				}
+			}
+		}
+
+	}
+
+	.menu-trigger.active {
+		display: block;
+		top: 3rem;
+
+		span {
+			background-color: $white;
+
+			&:nth-child(1) {
+				transform: rotate(45deg);
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+
+			&:nth-child(3) {
+				top: 12px;
+				transform: rotate(135deg);
+			}
+		}
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+	}
+
+	.header-slide {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		background: $black;
+		transition: 0.35s ease-in-out;
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		.header-slide-inner {
+			.header-slide-in {
+				margin-bottom: 7rem;
+				padding: 1rem 2rem;
+
+				.logo {
+					width: 180px;
+
+					a {
+						display: block;
+					}
+				}
+			}
+
+			.gnavIn {
+				li {
+					a {
+						display: block;
+						position: relative;
+						margin-bottom: 2.5rem;
+						color: $white;
+						font-size: 2.2rem;
+						font-weight: 700;
+						text-decoration: none;
+						text-align: center;
+					}
+				}
+			}
+
+			.apply-btn {
+				margin: 0 auto;
+
+				@include mq(sp) {
+					width: 80%;
+				}
+			}
+		}
+	}
+
+	.header-slide.active {
+		right: 0;
+	}
+}
+
+.sp-single {
+	display: block;
+	.row {
+		display: flex;
+		justify-content: space-between;
+		padding: 0.9rem 1rem 0.9rem 2.5rem;
+		background-color: $color04;
+		border-bottom: 1px solid $color06;
+
+		.single-logo {
+			width: 40%;
+			max-width: 130px;
+		}
+	}
+
+	&.sticky {
+		display: none;
+	}
+}

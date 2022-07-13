@@ -1,0 +1,89 @@
+/* ========================================================
+config - サイト共通設定
+======================================================== */
+/*  共通カラー変数
+/* -------------------------------------------------------- */
+/* サイト別 */
+$color01: #A80000; // key1
+$color02: #9D0000; // key2
+$color03: #7E0202; // key3
+$color04: #00081A; // key4
+$color05: #000000; // key5
+$color06: #707070; // key6
+$color07: #DDDDDD; // key7
+$color08: #010819; // key8
+$color09: #D1D1D1; // key9
+$color10: #F0F0F0; // key10
+$color11: #D38E8E; // key11
+$color12: #9D8745; // key12
+$color13: #99884F; // key13
+$color14: #595857; // key14
+$color15: #9A1E13; // key15
+
+
+//images path #{$v-img-path}
+$v-img-path: "../img/";
+
+/* モノトーン */
+$black: #000;
+$white: #fff;
+
+//画像相対パス #{$imgPath}
+$imgPath: "../img/"; //AMP用 img要素書き換え #{$img}
+$img: "img";
+
+@font-face {
+  font-family: 'Noto Sans JP';
+	font-style: normal;
+	font-weight: 400;
+  font-display: swap;
+	src: url('../../font/NotoSansJP-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans JP';
+	font-style: bold;
+	font-weight: 700;
+  font-display: swap;
+	src: url('../../font/NotoSansJP-Bold.otf') format('truetype');
+}
+
+@mixin font1(){
+	font-family: Noto Sans JP,Noto Sans CJK JP,sans-serif;
+}
+
+// 両端揃えの設定 @include justify();
+@mixin justify() {
+	text-align: justify;
+	text-justify: inter-ideograph;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+@mixin flex($wrap: nowrap, $justify: null, $item: null) {
+	display: flex;
+	@if $wrap != null {
+		flex-wrap: $wrap;
+	}
+	@if $justify != null {
+		justify-content: $justify;
+	}
+	@if $item != null {
+		align-items: $item;
+	}
+	box-sizing: border-box;
+}
+
+// breakepoint
+$breakpoints: (
+	"sp": "screen and (max-width: 767px)",
+  "md-ipad": "only screen and (min-device-width: 768px) and (max-device-width: 1024px)",
+	"md": "screen and (min-width: 768px)",
+	"md-ip5": "screen and (max-width: 320px)",
+)!default;
+// @mixinの定義
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}

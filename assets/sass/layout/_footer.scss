@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+.footer {
+	background-color: $black;
+
+	.btn-gp {
+		width: 100%;
+
+		@include mq(sp) {
+			padding-top: 5rem;
+		}
+
+		@include mq() {
+			padding: 9.3rem 0 7.8rem;
+		}
+
+		.ft-inner {
+
+			@include mq() {
+				display: flex;
+				justify-content: space-between;
+				width: 90%;
+				margin: 0 auto;
+				max-width: 965px;
+			}
+
+			.ft-btn {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				box-shadow: 0 7px 0 #cccccc;
+				box-sizing: border-box;
+				background-color: $white;
+				color: $color04;
+				font-weight: bold;
+				letter-spacing: 1.2px;
+				transition: .3s;
+				border-radius: 10px;
+
+				@include mq(sp) {
+					width: 100%;
+					height: 60px;
+					padding: 0 1.5rem;
+					font-size: 1.6rem;
+				}
+
+				@include mq() {
+					width: 43.2%;
+					height: 92px;
+					padding: 0 1.8rem;
+					font-size: 2.1rem;
+					max-width: 452px;
+				}
+
+				span {
+					position: relative;
+					width: 100%;
+					text-align: center;
+
+					&::after {
+						position: absolute;
+						top: 50%;
+						right: 0;
+						background: url(#{$v-img-path}ico_arrow_black.png) top center no-repeat;
+						background-size: contain;
+						content: "";
+						transform: translate(0, -50%);
+
+						@include mq(sp) {
+							width: 15px;
+							height: 21px;
+						}
+
+						@include mq() {
+							width: 20px;
+							height: 26px;
+						}
+					}
+				}
+
+				&:hover {
+					box-shadow: none;
+					transform: translate3d(0, 3px, 0);
+					opacity: 1;
+				}
+
+				&.info-btn {
+					box-shadow: 0 7px 0 $color03;
+					background: $color01;
+					color: $white;
+
+					@include mq(sp) {
+						margin-bottom: 3rem;
+					}
+
+					span {
+						&::after {
+							background: url(#{$v-img-path}ico_arrow_white.png) top center no-repeat;
+							background-size: contain;
+						}
+					}
+
+					&:hover {
+						box-shadow: none;
+						transform: translate3d(0, 3px, 0);
+						opacity: 1;
+					}
+				}
+			}
+
+
+		}
+	}
+
+	.ft-blk {
+		@include mq(sp) {
+			padding: 3.5rem 0 2rem;
+		}
+
+		@include mq() {
+			padding: 6.5rem 0 3rem;
+		}
+
+		.ft-inner {
+			@include mq(sp) {
+				display: block;
+			}
+
+			@include mq() {
+				display: flex;
+				justify-content: space-between;
+
+				.ft-gnav {
+					display: flex;
+					justify-content: space-between;
+					width: 50%;
+					max-width: 485px;
+
+					.ft-gnavIn {
+						width: 20%;
+
+						&:nth-child(2) {
+							width: 45%;
+						}
+
+						&:last-child {
+							width: 30%;
+						}
+
+						li {
+							margin-bottom: 0.7rem;
+
+							a {
+								line-height: 1.3;
+								color: $white;
+								font-size: 1.2rem;
+								font-weight: normal;
+								letter-spacing: 1px;
+							}
+
+							&.sub-menu {
+								position: relative;
+								margin-left: 1.2rem;
+								padding-left: 1rem;
+
+								&::before {
+									position: absolute;
+									top: 50%;
+									left: 0;
+									color: $white;
+									font-size: 1.2rem;
+									content: "-";
+									transform: translate(0, -50%);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.ft-logo {
+				text-align: center;
+
+				@include mq(sp) {
+					width: 80%;
+					margin: auto;
+				}
+
+				@include mq() {
+					width: 22%;
+				}
+
+				.logo-img {
+					display: block;
+				}
+
+				.ico-gp {
+					display: flex;
+					justify-content: center;
+					margin: 2.6rem 0 0 -1.5rem;
+
+					.ft-icon {
+						display: inline-block;
+						width: 34px;
+
+						&.insta-icon {
+							margin-left: 2rem;
+						}
+					}
+				}
+			}
+		}
+
+		.ft-copyright {
+			text-align: center;
+
+			@include mq(sp) {
+				margin-top: 4rem;
+			}
+
+			@include mq() {
+				margin-top: 8.6rem;
+			}
+
+			span {
+				width: 100%;
+				line-height: 1.2;
+				color: $white;
+				font-size: 0.9rem;
+				font-weight: normal;
+				letter-spacing: 1.3px;
+			}
+		}
+	}
+}
+
+.pagetop {
+	position: absolute;
+	z-index: 6;
+	padding: 2rem 1.6rem;
+	background: $color02;
+
+	@include mq(sp) {
+		right: 2rem;
+	}
+
+	@include mq() {
+		right: 6rem;
+		opacity: 0.6;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	img {
+		width: 25px;
+		height: 15px;
+	}
+}
