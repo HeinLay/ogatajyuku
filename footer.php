@@ -18,7 +18,7 @@
 <footer class="footer">
 	<div class="btn-gp">
 		<div class="ft-inner w-1077">
-			<a href="<?php bloginfo('url'); ?>/entry/" class="ft-btn info-btn"><span>日程案内・説明会お申し込み</span></a>
+			<a href="<?php bloginfo('url'); ?>/entry/" class="ft-btn info-btn"><span>日程案内・体験会お申し込み</span></a>
 			<a href="<?php bloginfo('url'); ?>/contact/" class="ft-btn"><span>お問い合わせ</span></a>
 		</div>
 	</div>
@@ -47,7 +47,7 @@
 					<li class="sub-menu"><a href="<?php bloginfo('url'); ?>/about/#visionmap">小縣塾実践会ビジョンマップ</a></li>
 					<li class="sub-menu"><a href="<?php bloginfo('url'); ?>/about/#instructor">サポート講師紹介</a></li>
 					<li class="sub-menu"><a href="<?php bloginfo('url'); ?>/about/#company">会社概要</a></li>
-					<li><a href="<?php bloginfo('url'); ?>/entry/">説明会について</a></li>
+					<li><a href="<?php bloginfo('url'); ?>/entry/">体験会について</a></li>
 				</ul>
 				<ul class="ft-gnavIn">
 					<li><a href="<?php bloginfo('url'); ?>/profile/">小縣新プロフィール</a></li>

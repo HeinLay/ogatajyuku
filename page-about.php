@@ -81,7 +81,7 @@ Template Name: 小縣塾とは
         </div>
       </div>
       <a href="<?php bloginfo('url'); ?>/profile/" class="white-btn-big hover-effect btn-center"><span>小縣新プロフィールはこちら</span></a>
-      <a href="<?php bloginfo('url'); ?>/entry/" class="red-btn hover-effect btn-center"><span>説明会の日程・参加のお申し込みはこちらから</span></a>
+      <a href="<?php bloginfo('url'); ?>/entry/" class="red-btn hover-effect btn-center"><span>体験会の日程・参加のお申し込みはこちらから</span></a>
     </div>
   </div>
   <!-- ./ sec-power -->
@@ -135,7 +135,7 @@ Template Name: 小縣塾とは
           </div>
         <?php } ?>
       <?php endwhile;?>
-      <a href="<?php bloginfo('url'); ?>/entry/" class="red-btn hover-effect btn-center"><span>説明会の日程・参加のお申し込みはこちらから</span></a>
+      <a href="<?php bloginfo('url'); ?>/entry/" class="red-btn hover-effect btn-center"><span>体験会の日程・参加のお申し込みはこちらから</span></a>
     </div>
   </div>
   <!-- ./ message-coach -->

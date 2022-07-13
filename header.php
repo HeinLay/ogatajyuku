@@ -104,7 +104,7 @@
 					</li>
 				</ul>
 				<a href="<?php bloginfo('url'); ?>/entry/" class="apply-btn hover-effect">
-					<span>説明会</span><span>の</span>お申し込み<span>は</span><br>こちらから
+					<span>体験会</span><span>の</span>お申し込み<span>は</span><br>こちらから
 				</a>
 			</div>
 		</div>

@@ -179,7 +179,7 @@ get_header();
           </li>
         </ul>
         <a href="<?php bloginfo('url'); ?>/voice/" class="cmn-btn01"><span>受講者の声を見る</span></a>
-        <a href="<?php bloginfo('url'); ?>/entry/" class="cmn-btn02 benefit-btn"><span>説明会の日程・参加のお申し込みはこちらから</span></a>
+        <a href="<?php bloginfo('url'); ?>/entry/" class="cmn-btn02 benefit-btn"><span>体験会の日程・参加のお申し込みはこちらから</span></a>
       </div>
     </div>
   </div>
